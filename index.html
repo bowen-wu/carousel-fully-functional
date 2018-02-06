@@ -9,30 +9,41 @@
     <script src="//at.alicdn.com/t/font_537353_dgnnlhysbtricnmi.js"></script>
 </head>
 <body>
-    <div id="window" class="window">
-        <ul id="wrapper" class="wrapper" style="transform:translateX(-600px)">
-            <li><img width="600" height="338" src="./image/desert01.jpg" alt="沙漠"></li>
-            <li><img width="600" height="338" src="./image/desert02.jpg" alt="沙漠"></li>
-            <li><img width="600" height="338" src="./image/desert03.jpg" alt="沙漠"></li>
-            <li><img width="600" height="338" src="./image/desert04.jpg" alt="沙漠"></li>
-        </ul>
-        <svg class="prev icon">
-            <use xlink:href="#icon-left"></use>
-        </svg>
-        <svg class="next icon">
-            <use xlink:href="#icon-right"></use>
-        </svg>
-    </div>
-    
-    <div id="index" class="index">
-        <ul class="clearfix">
-            <li class="active"></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
+    <div id="carousel" class="carousel">
+        <div id="window" class="window">
+            <ul id="wrapper" class="wrapper" style="transform:translateX(-600px)">
+                <li>
+                    <img width="600" height="338" src="./image/desert01.jpg" alt="沙漠">
+                </li>
+                <li>
+                    <img width="600" height="338" src="./image/desert02.jpg" alt="沙漠">
+                </li>
+                <li>
+                    <img width="600" height="338" src="./image/desert03.jpg" alt="沙漠">
+                </li>
+                <li>
+                    <img width="600" height="338" src="./image/desert04.jpg" alt="沙漠">
+                </li>
+            </ul>
+            <svg class="prev icon">
+                <use xlink:href="#icon-left"></use>
+            </svg>
+            <svg class="next icon">
+                <use xlink:href="#icon-right"></use>
+            </svg>
+        </div>
+
+        <div id="index" class="index">
+            <ul class="clearfix">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
     </div>
     <script src="./js/jquery-3.2.1.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/main-MVC.js"></script>
+    <!-- <script src="./js/main.js"></script> -->
 </body>
 </html>

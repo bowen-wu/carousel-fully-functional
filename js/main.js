@@ -52,16 +52,16 @@ $(() => {
         }else if(current === 0 && goIndex === len-1){
             special(0,len*$picWidth)
         }else{
-            $wrapper.css({'transform':'translateX(-' + (goIndex+1)*$picWidth + 'px)'})
+            $wrapper.css({transform: `translateX(-${(goIndex+1)*$picWidth}px)`},500)
         }
         $index.eq(goIndex).addClass('active').siblings().removeClass('active')
         current = goIndex
     }
 
     function special(falsePos,truePos){
-        $wrapper.css({'transform':'translateX(-' + falsePos + 'px)'}).one('transitionend',(event) => {
+        $wrapper.css({transform: `translateX(-${falsePos}px)`},500).one('transitionend',(event) => {
             $wrapper.hide().offset()
-            $wrapper.css({'transform':'translateX(-' + truePos + 'px)'}).show()
+            $wrapper.css({transform: `translateX(-${falsePos}px)`},500).show()
         })
     }
 
@@ -74,13 +74,12 @@ $(() => {
     function hoverAndPage() {
         $window.hover(() => {
             clearInterval(timer)
-            addClass(true)
+            addKlass(true)
         }, () => {
             timer = autoPlay()
-            addClass(false)
+            addKlass(false)
         })
         $(document).on('visibilitychange', () => {
-            console.log(document.hidden)
             if (document.hidden) {
                 clearInterval(timer)
             } else {
@@ -89,7 +88,7 @@ $(() => {
         })
     }
 
-    function addClass(isAdd) {
+    function addKlass(isAdd) {
         let method = isAdd ? 'addClass' : 'removeClass'
         $prev[method]('active')
         $next[method]('active')
